@@ -55,35 +55,36 @@ namespace StacksAndQueues
             }
         }
 
-        /* public int peek()
-         {
-             if (head == null)
-                 throw new NullReferenceException("empty List");
-             Node t = head, p = head;
-             while (t.next != null)
-             {
-                 p = t;
-                 t = t.next;
-             }
-             int obj = t.data;
-             return obj;
-         }*/
-
-        /* public int Pop()
-         {
-             if (head == null)
-             {
-                 throw new NullReferenceException("List is Empty");
-             }
-             Node t = head, p = head;
-             while (t.next != null)
-             {
-                 p = t;
-                 t = t.next;
-             }
+        public int peek()
+        {
+            if (head == null)
+                throw new NullReferenceException("empty List");
+            Node t = head, p = head;
+            while (t.next != null)
+            {
+                p = t;
+                t = t.next;
+            }
             int obj = t.data;
-             p.next = null;
-             return obj;
-         }*/
+            return obj;
+        }
+
+        public int Pop()
+        {
+            if (head == null)
+            {
+                throw new NullReferenceException("List is Empty");
+            }
+            Node t = head, p = head;
+            while (t.next != null)
+            {
+                p = t;
+                t = t.next;
+            }
+            int obj = t.data;
+            p.next = null;
+            return obj;
+        }
+
     }
 }
